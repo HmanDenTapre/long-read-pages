@@ -1,0 +1,1307 @@
+
+/* importing fonts from google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Permanent+Marker&family=Raleway:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* Font-family: 'Permanent Marker', 'Raleway', 'Pacifico', 'Space Mono', 'Monoton' */
+
+/* Importing the lWarp css file */
+
+/* @import url("lwarp.css"); */
+/* @import url("lwarp_formal.css"); */
+/* @import url("lwarp_sagebrush.css"); */
+
+
+/* CSS Template Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', arial, sans-serif;
+    color: #000;
+    font-size: 15px;
+    scroll-behavior: smooth;
+
+}
+
+body, html {
+    overflow-x: clip;
+}
+
+
+.section {
+    min-height: 100vh;
+    width: 100%;
+    align-items: start;
+    text-align: center;
+    position: relative;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.section figure{
+    margin: 30px;
+}
+
+
+.section figure img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px grey;
+}
+
+p:has(img){
+    display: contents;
+    margin: 0;
+}
+
+kbd:has(img){
+    display: contents;
+    margin: 0;
+}
+
+p:has( +header){
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+figure.figure > p {
+    display: contents;
+    margin: 0;
+}
+*/
+
+
+
+.figurecaption p{
+    font-size: 15px;
+    color: rgb(5, 5, 5);
+}
+
+
+h4, h5, p, ul {
+    padding-left: 20px;
+}
+
+
+h1 {
+    font-size: 50px;
+    color: #7bcef2;
+    text-align: center;
+    text-shadow: 2px 2px 5px #838282;
+    padding: 50px;
+}
+
+
+h4 {
+    font-size: 35px;
+    color: #3a74a4;
+    padding: 30px;
+}
+
+
+h5 {
+    font-size: 30px;
+    color: #65c35e;
+}
+
+
+p {
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    line-height: 1.3;
+    margin: 25px;
+}
+
+
+
+
+/* SECTION INTRO */
+/* Introduction with zoom-ins and a falling character */
+
+.sectionintro{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #f2af7b;
+    background-image: url('landscape1.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+
+.sectionintro .background{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url('background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: ZoomIn 3s ease-in-out forwards;
+    z-index: 10;
+}
+
+
+.sectionintro .character1{
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50%;
+    left: 10%;
+    z-index: 5;
+    background-image: url('potetparaply1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: FallDown 7s ease-in forwards, ImageSwitching 2s linear infinite;
+    animation-delay: 0s, 7s;
+}
+
+
+.sectionintro .container{
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 5%;
+}
+
+
+.sectionintro h1{
+    font-size: 80px;
+    font-style: bold;
+    color: white;
+    text-shadow: 10px 6px black;
+    text-decoration: underline overline rgb(177, 69, 69);
+}
+
+
+
+
+
+/* SECTION1 */
+/* long scroll with pictures and text after each other, one background color */
+
+.section1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #9ACBD0;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.section1 .container{
+    margin-top: 10%;
+    margin-bottom: 50px;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+
+.section1 figure {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.section1 figure img{
+    max-width: 100%;
+    height: auto;
+    border: 10px solid white; 
+}
+
+
+.section1 figure:hover img{
+    border: 10px solid #48A6A7;
+    box-shadow: 2px 2px rgb(181, 181, 181);
+    transition: 0.3s;
+}
+
+
+.section1 p{
+    font-size: 20px;
+    padding: 20px;
+    color: #006A71;
+    border-radius: 15px;
+}
+
+
+.section1 p:hover{
+    background-color: #48A6A7;
+    color: #F2EFE7;
+    border-radius: 15px;
+    box-shadow: 15px 15px #77abb1;
+    transition: 0.3s;
+}
+
+
+.section1 h4 {
+    font-size: 45px;
+    color: rgb(168, 36, 36);
+    font-family: 'Space Mono';
+    font-weight: bolder;
+    text-shadow: 6px 2px 1px #ffffff;
+    text-decoration: #48A6A7 solid underline;
+}
+
+
+.section1 h5 {
+    font-size: 35px;
+    color: rgb(36, 95, 168);
+    font-family: 'Space Mono';
+    font-weight: bolder;
+    text-shadow: 6px 2px 1px #ffffff;
+    text-decoration: #48A6A7 solid underline;
+}
+
+
+
+
+/* SECTION2 */
+/* infinite looping animation backgrounds  */
+
+.section2 {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    
+}
+
+
+.section2 .background{
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: BackgroundImageChange11 5s linear infinite;
+}
+
+.section2 .container{
+    min-height: 100vh;
+    width: 100%;
+    padding: 50px;
+    padding-left: 25%;
+    padding-right: 25%;
+    z-index: 3;
+    margin-top: -100vh;
+}
+
+
+.section2 p {
+    font-size: 20px;
+    color: white;
+    font-family: Montserrat;
+}
+
+
+.section2 h4 {
+    font-size: 45px;
+    color: black;
+    font-family: monospace;
+    text-shadow: 6px 2px 1px #ffffff;
+    text-decoration: blue wavy underline;
+}
+
+
+.section2 h5 {
+    font-size: 35px;
+    color: black;
+    font-family: monospace;
+    text-shadow: 6px 2px 1px #ffffff;
+    text-decoration: blue wavy underline;
+}
+
+
+.section2 figure{
+    max-width: 90%;
+    height: auto;
+}
+
+
+.section2 figure img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 10px 10px black;
+}
+
+
+
+
+/* SECTION3 */
+/* pictures on the left, text on right*/
+
+.section3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #E4E0E1;
+    background-image: repeating-linear-gradient(0deg, #bdbdc1, #bdbdc1 1px, transparent 1px, transparent);
+    background-size: 29px 29px;
+}
+
+
+.section3 .container{
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1.5fr;
+    grid-auto-flow: dense;
+    gap: 20px;
+}
+
+
+.section3 .container::before {
+    content: "";
+    grid-column: 1;
+    grid-row: 1;
+}
+
+
+.section3 figure{
+    grid-column: 1;
+    justify-items: center;
+    width: 90%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+.section3 figure img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 10px solid white;
+    border-bottom-width: 30px;
+    box-shadow: 3px 3px lightgrey;
+}
+
+
+.section3 figure:nth-of-type(even) img{
+    transform: rotate(10deg);
+    transition: 0.3s;
+}
+
+
+.section3 figure:nth-of-type(odd) img{
+    transform: rotate(-10deg);
+    transition: 0.3s;
+}
+
+
+.section3 figure:hover img{
+    transform: rotate(0deg);
+    box-shadow: 3px 3px #D6C0B3;
+}
+
+
+.section3 h1, .section3 h2, .section3 h3, .section3 h4, .section3 h5, .section3 p {
+    grid-column: 2;
+    text-align: left;
+    max-width: 600px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+.section3 p{
+    color: #493628;
+    background-color: #D6C0B3;
+    padding: 30px;
+    border-radius: 10px;
+    border: 15px solid white;
+    box-shadow: 0 6px 10px 0 rgba(142, 142, 142, 0.37);
+}
+
+
+.section3 p:hover{
+    text-decoration: underline solid 2px #AB886D;
+    background-color: #c69b7b;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+
+.section3 h4 {
+    font-size: 50px;
+    color: #493628;
+    font-family: 'Monoton';
+    letter-spacing: 0.1em;
+    text-shadow: -2px 2px white;
+    border-bottom: 5px solid #493628 ;
+    padding-bottom: 0;
+}
+
+
+.section3 h5 {
+    font-size: 40px;
+    color: #493628;
+    font-family: 'Monoton';
+    letter-spacing: 0.1em;
+    text-shadow: -2px 2px white;
+    border-bottom: 5px solid #493628 ;
+    padding-bottom: 0;
+}
+
+
+
+
+/* SECTION4 */
+/* pics on right and text on left*/
+
+
+.section4 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+
+
+.section4 .container{
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1.5fr 1fr;
+    grid-auto-flow: dense;
+    gap: 20px;
+}
+
+
+.section4 figure{
+    grid-column: 2;
+    justify-items: center;
+    width: 90%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.section4 .container::before {
+    content: "";
+    grid-column: 2;
+    grid-row: 1;
+}
+
+
+.section4 figure img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 10px solid white;
+    border-bottom-width: 30px;
+    box-shadow: 3px 3px lightgrey; 
+}
+
+
+.section4 figure:nth-of-type(even) img{
+    transform: rotate(6deg);
+    transition: 0.3s;
+}
+
+
+.section4 figure:nth-of-type(odd) img{
+    transform: rotate(-6deg);
+    transition: 0.3s;
+}
+
+
+.section4 figure:hover img{
+    transform: rotate(0deg);
+    box-shadow: 3px 3px #d7157c;
+
+}
+
+
+.section4 h1, .section4 h2, .section4 h3, .section4 h4, .section4 h5, .section4 p {
+    grid-column: 1;
+    text-align: left;
+    max-width: 600px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+.section4 p{
+    padding: 25px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 2px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.section4 p:hover{
+    box-shadow: 0 8px 32px 0 rgba(194, 60, 212, 0.37);
+}
+
+
+.section4 h4 {
+    font-size: 60px;
+	letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    text-shadow: 8px 8px #d7157c, 15px 15px #000000;
+}
+
+
+.section4 h5 {
+    font-size: 40px;
+	letter-spacing:0.1em;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: white;
+    text-shadow: 8px 8px #d7157c, 15px 15px #000000;
+}
+
+
+
+
+/* SECTION5 */
+/* gradient background */
+
+.section5 {
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    background: rgb(146,233,187);
+    background: radial-gradient(circle, rgba(101, 230, 161, 0.425) 0%, rgba(123,206,242,1) 100%);
+}
+
+
+.section5 .container{
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+
+.section5 p{
+    font-size: 22px;
+    color: black;
+}
+
+
+.section5 h4 {
+    font-size: 45px;
+    color: black;
+    font-family: monospace;
+    text-shadow: -6px 2px 1px #ffffff;
+    text-decoration: pink wavy underline;
+}
+
+
+.section5 h5{
+    font-size: 35px;
+    color: pink;
+    font-family: monospace;
+    text-shadow: -6px 2px 1px #ffffff;
+}
+
+
+.section5 figure img{
+    border: 5px solid white;
+    border-bottom-width: 40px;
+    box-shadow: 10px 10px lightgrey;
+}
+
+
+
+/* SECTION6 */
+/* sticky background no animation, hover over image - the box-shadow will change color*/
+
+.section6 {
+    min-height: 100vh;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+.section6 .background{
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-image: url('10.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+
+.section6 .container{
+    margin-top: -100vh;
+    z-index: 5;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+
+.section6 figure {
+    margin: 50px;
+}
+
+
+.section6 figure img{
+    width: 500px;
+    height: auto;
+    border-radius: 0;
+}
+
+
+.section6 figure:nth-of-type(even) img{
+    box-shadow:
+    -50px -50px 0 -40px rgb(255, 77, 0),
+    50px 50px 0 -40px rgb(255, 77, 0);
+}
+
+
+.section6 figure:nth-of-type(odd) img{
+    box-shadow:
+    -50px -50px 0 -40px rgb(184, 224, 196),
+    50px 50px 0 -40px rgb(184, 224, 196);
+}
+
+
+.section6 figure img:hover{
+    box-shadow:
+    -50px -50px 0 -40px rgb(144, 189, 237),
+    50px 50px 0 -40px rgb(150, 209, 238);
+    transition: 0.5s;
+}
+
+
+.section6 p {
+    font-size: 22px;
+    color: white;
+}
+
+
+.section6 h4 {
+    font-size: 45px;
+    color: rgb(168, 36, 36);
+    font-family: 'Pacifico';
+    text-shadow: 6px 2px 1px #ffffff, -6px -3px rgb(239, 119, 119);
+    text-decoration: green solid underline;
+}
+
+
+.section6 h5 {
+    font-size: 35px;
+    color: rgb(168, 36, 36);
+    font-family: 'Pacifico';
+    text-shadow: 6px 2px 1px #ffffff, -6px -3px rgb(239, 119, 119);
+}
+
+
+
+
+
+
+/* SECTION 7*/
+/*long page gradient background change, figure same place, with images showing up with scroll */
+
+.section7 {
+    position: relative;
+    align-items: center;
+    padding: 50px;
+    min-height: 200vh;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 200px;
+    background: #22C1C3;
+    background: linear-gradient(0deg,rgba(49, 23, 166, 1) 0%, rgba(34, 193, 195, 1) 100%);
+}
+
+
+.section7 .container{
+    width: 100%;
+    min-height: 200vh;
+    position: relative;
+    z-index: 3;
+    margin: 50px;
+    padding-left: 25%;
+    padding-right: 25%
+}
+
+
+.section7 .character1{
+    width: 400px;
+    height: 400px;
+    position: sticky;
+    top: 20%;
+    z-index: 3;
+    background-image: url('potetparaply1.png');
+    background-size: cover;
+    animation: ImageSwitching 2s linear infinite;
+}
+
+
+.section7 figure{
+    position: relative;
+    width: 500px;
+    height: auto;
+    z-index: 2;
+    padding: 50px;
+}
+
+
+.section7 figure:nth-of-type(even){
+    animation: FromRightToLeft linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 80%;
+}
+
+
+.section7 figure:nth-of-type(odd){
+    animation: FromLeftToRight linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0 cover 80%;
+}
+
+
+.section7 h4{
+    transform: skew(-12deg) rotate(-12deg);
+    font-size: 140px;
+    color: #102E50;
+    margin: 50px;
+    text-shadow: 5px 4px 0 #F5C45E, -5px -4px 0 #BE3D2A;
+}
+
+
+.section7 h5{
+    transform: skew(-12deg) rotate(-12deg);
+    font-size: 100px;
+    color: #1d9099;
+    margin: 50px;
+    text-shadow: 5px 4px #E79C10, -5px -4px #D53A33;
+}
+
+
+
+
+
+
+
+/* SECTION8 */
+/* sticky background image, scroll only text move and some animation*/
+
+.section8 {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.section8 .background{
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    background-image: url('background.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+
+.section8 .movinganimation1{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 400px;
+    height: 400px;
+    background-image: url('potetparaply1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 6;
+}
+
+
+.section8 .movinganimation1:hover {
+    animation: ImageSwitching 3s linear;
+}
+
+
+.section8 .movinganimation2{
+    position: absolute;
+    top: 30%;
+    left: 3%;
+    width: 400px;
+    height: 400px;
+    background-image: url('ezgif-frame-008.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 6;
+}
+
+
+.section8 .movinganimation2:hover {
+    animation: BackgroundImageChange11 3s linear forwards;
+}
+
+
+.section8 .container{
+    width: 100%;
+    z-index: 5;
+    margin-top: -100vh;
+}
+
+
+.section8 p{
+    margin: 100px;
+    color: rgb(0, 0, 0);
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 4px );
+    border-radius: 2px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.section8 p, .section8 figure, .section8 li{
+    margin-left: 50%;
+    margin-right: 5%;
+}
+
+
+.section8 figure{
+    max-width: 80%;
+}
+
+
+.section8 figure img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 10px solid white;
+    border-bottom-width: 40px;
+    box-shadow: 3px 3px lightgrey;
+}
+
+
+.section8 h4{
+    font-size: 100px;
+    color: #5F8B4C;
+	letter-spacing:0.1em;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    text-shadow: 5px 5px #FFDDAB, 10px 10px #FF9A9A, 15px 15px #945034;
+}
+
+
+.section8 h5{
+    font-size: 80px;
+    color: #5F8B4C;
+	letter-spacing:0.1em;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: white;
+    text-shadow: 5px 5px #FFDDAB, 10px 10px #FF9A9A, 15px 15px #945034;
+}
+
+
+
+
+
+
+
+/* SECTION9*/ 
+/*background svg change color with walking character*/
+
+.section9{
+    position: relative;
+    min-height: 300vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: radial-gradient(circle, rgba(146,233,187,0.42482930672268904) 0%, rgba(123,206,242,1) 100%);
+    animation: BackgroundGradientChange linear;
+    animation-timeline: view(60% 20%);
+}
+
+
+.section9 .background{
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-image: url('landscape1.svg');
+    background-size: cover;
+    z-index: 1;
+}
+
+
+.section9 .container{
+    z-index: 2;
+    min-height: 300vh;
+    width: 100%;
+    margin-top: -50vh;
+    padding-left: 45%;
+    padding-right: 5%;
+}
+
+
+.section9 h4, .section9 h5, .section9 p, .section9 li{
+    position: relative;
+    z-index: 2;
+}
+
+
+.section9 .character1{
+    width: 400px;
+    height: 400px;
+    position: sticky;
+    top: 40%;
+    margin-top: -100vh;
+    opacity: 0;
+    z-index: 3;
+    background-image: url('potetparaply1.png');
+    background-size: cover;
+    animation: WalkingFromLeftSide ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 70%;
+ 
+}
+
+
+.section9 h4 {
+    font-size: 50px;
+    color: rgb(236, 228, 61);
+    font-family: 'Pacifico';
+    text-shadow: 3px -2px #ffffff;
+    text-decoration: rgb(228, 20, 204)  wavy underline;
+}
+
+
+.section9 h5 {
+    font-size: 35px;
+    color: rgb(236, 61, 116);
+    font-family: 'Pacifico';
+    text-shadow: 3px -2px #ffffff;
+}
+
+
+.section9 figure{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.section9 figure img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 10px solid white;
+    border-bottom-width: 50px;
+    box-shadow: 6px 6px lightgrey;
+}
+
+
+
+/* SECTION10 */ 
+/* scroll / view background change animation*/
+
+.section10{
+    min-height: 200vh;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    padding: 0;
+}
+
+
+.section10 .background{
+    width: 100%;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    background-image: url('1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: BackgroundImageChange11 linear forwards;
+    animation-timeline: view(100% 20%);
+    z-index: 1;
+}
+
+.section10 .container{
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+    margin-top: -100vh;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+
+.section10 p {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+
+.section10 h4 {
+    font-size: 50px;
+    color: rgb(88, 188, 221);
+    font-family: 'Permanent Marker';
+    text-shadow: 6px 3px #ffffff;
+    text-decoration: rgb(239, 215, 192) 35% dotted underline;
+}
+
+
+.section10 h5 {
+    font-size: 35px;
+    color: rgb(143, 182, 118);
+    font-family: 'Permanent Marker';
+    text-shadow: 6px 3px #ffffff;
+}
+
+
+.section10 figure{
+    max-width: 100%;
+    height: auto;
+}
+
+.section10 figure img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 10px solid white;
+    border-bottom-width: 50px;
+    box-shadow: 6px 6px lightgrey;
+}
+
+.section10 figure, .section10 p, .section10 li, .section10 h4, .section10 h5{
+    position: relative;
+    margin: 25px;
+}
+
+
+
+
+
+
+/******* Defined Animations @keyframes******* */
+
+
+/* Zooms in on image and then disappears */
+@keyframes ZoomIn{
+    0% { transform: scale(1); opacity: 1; }
+    80% { transform: scale(1.3); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+
+/* image falls down from top of the page to around middle of background*/
+@keyframes FallDown {
+    from {
+        transform: translateY(0%);
+        opacity: 0.9;
+    }
+    to {
+        transform: translateY(180%);
+        opacity: 1;
+    }
+}
+
+
+/* Changes background gradient colors*/
+@keyframes BackgroundGradientChange{
+    0% { background: linear-gradient(45deg, rgb(112, 197, 231), rgb(61, 160, 218)); }
+    60% { background: linear-gradient(45deg, rgb(225, 160, 239), rgb(186, 83, 150)); }
+    100% { background: linear-gradient(45deg, rgb(19, 26, 89), rgb(95, 71, 156)); }
+}
+
+
+
+/* image/figure moves from right to left side*/
+@keyframes FromRightToLeft{
+    0%{
+        transform: translateX(400%);
+    }
+    20%{
+        transform: translateX(50%);
+    }
+    40%{
+        transform: translateX(0%);
+    }
+    60%{
+        transform: translateX(-100%);
+    }
+    80%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(-500%);
+    }
+}
+
+
+
+/* image move from left to right */
+@keyframes FromLeftToRight{
+    0%{
+        transform: translateX(-400%);
+    }
+    20%{
+        transform: translateX(-50%);
+    }
+    40%{
+        transform: translateX(0%);
+    }
+    60%{
+        transform: translateX(100%);
+    }
+    80%{
+        transform: translateX(200%);
+    }
+    100%{
+        transform: translateX(500%);
+    }
+}
+
+/* switches between 3 images */
+@keyframes ImageSwitching{
+    0%{
+        background-image: url('potetparaply1.png')
+    }
+    50% {
+        background-image: url('potetparaply2.png')
+    }
+    100% {
+        background-image: url('potetparaply1.png')
+    }
+}
+
+
+/* Changing background images, assumming 11 images here*/
+@keyframes BackgroundImageChange11{
+    0%{
+        background-image: url('1.jpg')
+    }
+    10% {
+        background-image: url('2.jpg')
+    }
+    20% {
+        background-image: url('3.jpg')
+    }
+    30% {
+        background-image: url('4.jpg')
+    }
+    40% {
+        background-image: url('4.jpg')
+    }
+    50% {
+        background-image: url('6.jpg')
+    }
+    60% {
+        background-image: url('7.jpg')
+    }
+    70% {
+        background-image: url('8.jpg')
+    }
+    80% {
+        background-image: url('9.jpg')
+    }
+    90% {
+        background-image: url('10.jpg')
+    }
+    100% {
+        background-image: url('11.jpg')
+    }
+}
+
+
+/* Starts walking from the left side */
+@keyframes WalkingFromLeftSide {
+    0% {
+      transform: translateX(-100%) translateY(0);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(-90%) translateY(-5px);
+      opacity: 0;
+    }
+    20% {
+      transform: translateX(-80%) translateY(0px);
+      opacity: 0;
+    }
+    30% {
+      transform: translateX(-65%) translateY(-6px);
+      opacity: 0;
+    }
+    40% {
+      transform: translateX(-50%) translateY(0px);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-35%) translateY(-6px);
+    }
+    60% {
+      transform: translateX(-20%) translateY(0px);
+    }
+    70% {
+      transform: translateX(-5%) translateY(-4px);
+    }
+    80% {
+      transform: translateX(10vw) translateY(0px);
+    }
+    90% {
+      transform: translateX(15vw) translateY(-3px);
+    }
+    100% {
+      transform: translateX(20vw) translateY(0);
+      opacity: 1;
+    }
+  }
+
+@keyframes changeBackground5 {
+    0% { 
+        background-image: var(--img1); 
+    }
+    25% { 
+        background-image: var(--img2); 
+    }
+    50% { 
+        background-image: var(--img3); 
+    }
+    75% {
+         background-image: var(--img4); 
+        }
+    100% { 
+        background-image: var(--img5); 
+    }
+}
