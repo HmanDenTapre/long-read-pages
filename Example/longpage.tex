@@ -1,0 +1,23 @@
+\usepackage{lwarp}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations, patterns, shapes}
+
+% CSS file path
+\CSSFilename{style.css}
+
+% JavaScript file path
+\HTMLFirstPageTop{<script src="longpage.js" defer></script>}
+
+\usepackage{graphicx}
+\usepackage{svg}
+
+\tikzset{every picture/.style={ampersand replacement=&}} % Fix & in matrices
+
+\newcommand{\FrameCycle}[1]{%
+\noindent
+\texttt{<img class="frame-cycle" data-frames="#1" src="\expandafter\GetFirstImage#1,\relax">}
+}
+
+% Helper macro to extract first image path
+\def\GetFirstImage#1,#2\relax{#1}
