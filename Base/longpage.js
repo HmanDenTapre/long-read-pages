@@ -23,14 +23,12 @@ document.querySelectorAll('.coverbackground').forEach(bgimg => {
   });
 });
 
-/*
 document.querySelectorAll("img.frame-cycle").forEach(img => {
-    const frames = img.dataset.frames.split(",");
-    let i = 0;
-  
-    setInterval(() => {
-      i = (i + 1) % frames.length;
-      img.src = frames[i].trim();
-    }, 200); // 200ms per frame
+  const frames = img.dataset.frames.split(",");
+  let i = 0;
+
+  setInterval(() => {
+    i = (i + 1) % frames.length;
+    img.src = frames[i].trim();
+  }, 200); // 200ms per frame
 });
-*/
