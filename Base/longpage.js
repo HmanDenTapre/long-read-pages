@@ -1,10 +1,26 @@
 
 document.querySelectorAll('.background').forEach(bgimg => {
-    const imgs = bgimg.querySelectorAll('img');
-    imgs.forEach((img, index) => {
+  const imgs = bgimg.querySelectorAll('img');
+  imgs.forEach((img, index) => {
       bgimg.style.setProperty(`--img${index + 1}`, `url(${img.src})`);
-      img.style.display = 'none'; 
-    });
+      img.style.display = 'none';
+  });
+});
+
+document.querySelectorAll('.character1').forEach(bgimg => {
+  const imgs = bgimg.querySelectorAll('img');
+  imgs.forEach((img, index) => {
+      bgimg.style.setProperty(`--img${index + 1}`, `url(${img.src})`);
+      img.style.display = 'none';
+  });
+});
+
+document.querySelectorAll('.coverbackground').forEach(bgimg => {
+  const imgs = bgimg.querySelectorAll('img');
+  imgs.forEach((img, index) => {
+      bgimg.style.setProperty(`--img${index + 1}`, `url(${img.src})`);
+      img.style.display = 'none';
+  });
 });
 
 /*
