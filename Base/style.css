@@ -134,9 +134,8 @@ p {
 .sectionintro{
     position: relative;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-color: #f2af7b;
-    background-image: url('landscape1.svg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -144,12 +143,13 @@ p {
     padding: 0;
 }
 
-
-.sectionintro .background{
+.sectionintro .coverbackground{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: absolute;
-    background-image: url('background.jpg');
+    top: 0;
+    left: 0;
+    background-image: var(--img1);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -158,19 +158,37 @@ p {
 }
 
 
+.sectionintro .background{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: var(--img1);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
 .sectionintro .character1{
     width: 400px;
     height: 400px;
     position: absolute;
     top: -50%;
-    left: 10%;
+    left: 5%;
     z-index: 5;
-    background-image: url('potetparaply1.png');
+    background-image: var(--img1);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    animation: FallDown 7s ease-in forwards, ImageSwitching 2s linear infinite;
-    animation-delay: 0s, 7s;
+    animation: FallDown 4s ease-in forwards, ImageSwitching3 2s linear infinite;
+    animation-delay: 3s, 7s;
+}
+
+
+.sectionintro .character1 figure {
+    margin: 0;
 }
 
 
@@ -184,12 +202,12 @@ p {
 }
 
 
-.sectionintro h1{
+.sectionintro h4{
     font-size: 80px;
     font-style: bold;
     color: white;
     text-shadow: 10px 6px black;
-    text-decoration: underline overline rgb(177, 69, 69);
+    text-decoration: underline  rgb(177, 69, 69);
 }
 
 
@@ -201,7 +219,7 @@ p {
 
 .section1 {
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-color: #9ACBD0;
     align-items: center;
     margin: 0;
@@ -210,14 +228,17 @@ p {
 
 
 .section1 .container{
-    margin-top: 10%;
+    align-items: center;
     margin-bottom: 50px;
-    padding-left: 25%;
-    padding-right: 25%;
+    padding: 0 20%;
+    margin-top: 20px;
 }
 
 
 .section1 figure {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
     height: auto;
 }
@@ -225,6 +246,7 @@ p {
 
 .section1 figure img{
     max-width: 100%;
+    width: 100%;
     height: auto;
     border: 10px solid white; 
 }
@@ -234,6 +256,19 @@ p {
     border: 10px solid #48A6A7;
     box-shadow: 2px 2px rgb(181, 181, 181);
     transition: 0.3s;
+}
+
+
+.section1 figure p {
+    text-align: center;
+}
+
+
+.section1 figure p:hover {
+    background: none;
+    box-shadow: none;
+    color: inherit;
+    text-align: center;
 }
 
 
@@ -281,35 +316,39 @@ p {
 
 .section2 {
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: relative;
     padding: 0;
     margin: 0;
     align-items: center;
-    
-}
+    display: flex;
+    flex: column;
+    z-index: 1;
 
+}
 
 .section2 .background{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: sticky;
     top: 0;
-    z-index: 2;
+    z-index: -1;
+    background-image: var(--img1);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     animation: BackgroundImageChange11 5s linear infinite;
 }
 
+
 .section2 .container{
     min-height: 100vh;
-    width: 100%;
-    padding: 50px;
-    padding-left: 25%;
-    padding-right: 25%;
+    width: 100vw;
+    align-items: center;
+    padding: 0 20%;
     z-index: 3;
-    margin-top: -100vh;
+    
+    
 }
 
 
@@ -326,6 +365,8 @@ p {
     font-family: monospace;
     text-shadow: 6px 2px 1px #ffffff;
     text-decoration: blue wavy underline;
+    z-index: 3;
+    margin: 0;
 }
 
 
@@ -351,6 +392,13 @@ p {
     box-shadow: 10px 10px black;
 }
 
+.section2 figure p {
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: inherit;
+    text-align: center;
+}
 
 
 
@@ -359,7 +407,7 @@ p {
 
 .section3 {
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-color: #E4E0E1;
     background-image: repeating-linear-gradient(0deg, #bdbdc1, #bdbdc1 1px, transparent 1px, transparent);
     background-size: 29px 29px;
@@ -368,33 +416,28 @@ p {
 
 .section3 .container{
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: grid;
     align-items: center;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 1fr;
     grid-auto-flow: dense;
     gap: 20px;
-}
-
-
-.section3 .container::before {
-    content: "";
-    grid-column: 1;
-    grid-row: 1;
+    margin: 0;
+    padding: 0;
 }
 
 
 .section3 figure{
     grid-column: 1;
     justify-items: center;
-    width: 90%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 100%;
+    max-width: 700px;
 }
 
 
 .section3 figure img{
     max-width: 100%;
+    width: 700px;
     height: auto;
     border-radius: 10px;
     border: 10px solid white;
@@ -420,11 +463,26 @@ p {
     box-shadow: 3px 3px #D6C0B3;
 }
 
+.section3 figure p, .section3 figure p:hover{
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: inherit;
+    text-align: center;
+    margin: 0px;
+    padding: 0;
+}
 
-.section3 h1, .section3 h2, .section3 h3, .section3 h4, .section3 h5, .section3 p {
+ .section3 .container h4, .section3 .container h5, .section3 .container p {
     grid-column: 2;
     text-align: left;
     max-width: 600px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.section3 h4, .section3 h5 {
+    text-align: center;
     margin-left: 10%;
     margin-right: 10%;
 }
@@ -478,7 +536,7 @@ p {
 
 .section4 {
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     background-color: #8EC5FC;
     background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 }
@@ -486,10 +544,10 @@ p {
 
 .section4 .container{
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: grid;
     align-items: center;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-auto-flow: dense;
     gap: 20px;
 }
@@ -498,21 +556,16 @@ p {
 .section4 figure{
     grid-column: 2;
     justify-items: center;
-    width: 90%;
-    margin: 0;
-    padding: 0;
-}
-
-
-.section4 .container::before {
-    content: "";
-    grid-column: 2;
-    grid-row: 1;
+    width: 100%;
+    max-width: 600px;
+    margin-left: -8%;
+    margin-right: 5%;
 }
 
 
 .section4 figure img{
-    max-width: 100%;
+    max-width: 90%;
+    width: 550px;
     height: auto;
     border-radius: 10px;
     border: 10px solid white;
@@ -537,6 +590,16 @@ p {
     transform: rotate(0deg);
     box-shadow: 3px 3px #d7157c;
 
+}
+
+.section4 figure p, .section4 figure p:hover{
+    background: none;
+    box-shadow: none;
+    border: none;
+    color: inherit;
+    text-align: center;
+    margin: 0px;
+    padding: 0;
 }
 
 
@@ -591,7 +654,7 @@ p {
 
 .section5 {
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     align-items: center;
     background: rgb(146,233,187);
     background: radial-gradient(circle, rgba(101, 230, 161, 0.425) 0%, rgba(123,206,242,1) 100%);
@@ -626,8 +689,17 @@ p {
     text-shadow: -6px 2px 1px #ffffff;
 }
 
+.section5 figure p {
+    text-align: center;
+}
+
+.section5 figure{
+    max-width: 100%;
+}
 
 .section5 figure img{
+    width: 500px;
+    max-width: 100%;
     border: 5px solid white;
     border-bottom-width: 40px;
     box-shadow: 10px 10px lightgrey;
@@ -640,18 +712,24 @@ p {
 
 .section6 {
     min-height: 100vh;
+    width: 100vw;
     align-items: center;
+    display: flex;
+    flex: column;
     margin: 0;
     padding: 0;
+    position: relative;
+    background-color: lightblue;
+    
 }
 
 
 .section6 .background{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: sticky;
     top: 0;
-    background-image: url('10.jpg');
+    background-image: var(--img1);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -660,7 +738,6 @@ p {
 
 
 .section6 .container{
-    margin-top: -100vh;
     z-index: 5;
     padding-left: 25%;
     padding-right: 25%;
@@ -674,6 +751,7 @@ p {
 
 .section6 figure img{
     width: 500px;
+    max-width: 100%;
     height: auto;
     border-radius: 0;
 }
@@ -713,6 +791,7 @@ p {
     font-family: 'Pacifico';
     text-shadow: 6px 2px 1px #ffffff, -6px -3px rgb(239, 119, 119);
     text-decoration: green solid underline;
+    z-index: 5;
 }
 
 
@@ -745,7 +824,7 @@ p {
 
 
 .section7 .container{
-    width: 100%;
+    width: 100vw;
     min-height: 200vh;
     position: relative;
     z-index: 3;
@@ -761,15 +840,25 @@ p {
     position: sticky;
     top: 20%;
     z-index: 3;
-    background-image: url('potetparaply1.png');
+    background-image: var(--img1);
     background-size: cover;
-    animation: ImageSwitching 2s linear infinite;
+    background-repeat: no-repeat;
+    animation: ImageSwitching3 2s linear infinite;
 }
 
 
 .section7 figure{
     position: relative;
-    width: 500px;
+    min-width: 500px;
+    max-width: 100%;
+    height: auto;
+    z-index: 2;
+    padding: 50px;
+}
+
+
+.section7 figure img{
+    max-width: 500px; 
     height: auto;
     z-index: 2;
     padding: 50px;
@@ -814,22 +903,27 @@ p {
 
 
 /* SECTION8 */
-/* sticky background image, scroll only text move and some animation*/
+/* sticky background image, quiz page */
 
 .section8 {
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #EEAECA;
+    background: radial-gradient(circle,rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
 
 .section8 .background{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     position: sticky;
     top: 0;
-    background-image: url('background.jpg');
+    background-image: var(--img1);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -837,64 +931,107 @@ p {
 }
 
 
-.section8 .movinganimation1{
+.section8 .character1{
     position: absolute;
-    top: 10%;
-    left: 5%;
-    width: 400px;
-    height: 400px;
-    background-image: url('potetparaply1.png');
+    bottom: 3%;
+    left: 70%;
+    max-width: 400px;
+    width: 300px;
+    height: 300px;
+    max-height: 400px;
+    background-image: var(--img1);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: 6;
+    animation: ImageSwitching3 3s linear infinite;
 }
 
-
-.section8 .movinganimation1:hover {
-    animation: ImageSwitching 3s linear;
-}
-
-
-.section8 .movinganimation2{
-    position: absolute;
-    top: 30%;
-    left: 3%;
-    width: 400px;
-    height: 400px;
-    background-image: url('ezgif-frame-008.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 6;
-}
-
-
-.section8 .movinganimation2:hover {
-    animation: BackgroundImageChange11 3s linear forwards;
-}
 
 
 .section8 .container{
-    width: 100%;
+    position: relative;
+    width: 70vw;
     z-index: 5;
-    margin-top: -100vh;
-}
-
-
-.section8 p{
-    margin: 100px;
-    color: rgb(0, 0, 0);
-    background: rgba( 255, 255, 255, 0.25 );
-    backdrop-filter: blur( 4px );
-    border-radius: 2px;
+    margin-bottom: 100px;
+    padding: 30px 40px;
+    background: rgba( 255, 255, 255, 0.4 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 17.5px );
+    -webkit-backdrop-filter: blur( 17.5px );
+    border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 
-.section8 p, .section8 figure, .section8 li{
-    margin-left: 50%;
-    margin-right: 5%;
+.section8 .question{
+    background-color: rgb(138, 170, 239);
+    align-items: center;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 12px;
+   
+}
+
+.section8 .question p{
+    font-size: 18px;
+
+}
+
+.section8 .choices{
+    min-height: 100px;
+    align-items: center;
+    margin-bottom: 50px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.section8 .choices li{
+    background-color: white;
+    margin-bottom: 15px;
+    padding: 12px 20px;
+    border-radius: 12px;
+}
+
+.section8 .answer{
+    min-height: 100px;
+    background-color: #86D293;
+    align-items: center;
+    color: #86D293;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 12px;
+
+}
+
+.section8 .answer p{
+    color: #86D293;
+}
+
+.section8 .answer:hover p{
+    color: rgb(0, 0, 0);
+}
+
+
+.section8 p, .section8 ul {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+
+.section8 ul {
+    list-style-position: inside;
+}
+
+.section8 ul li {
+    margin: 5px;
+    padding: 5px;
 }
 
 
@@ -904,22 +1041,20 @@ p {
 
 
 .section8 figure img{
-    max-width: 100%;
+    max-width: 500px;
+    width: 100%;
     height: auto;
-    border-radius: 10px;
-    border: 10px solid white;
-    border-bottom-width: 40px;
-    box-shadow: 3px 3px lightgrey;
+    border-radius: 10px; 
 }
 
 
 .section8 h4{
-    font-size: 100px;
+    font-size: 50px;
     color: #5F8B4C;
 	letter-spacing:0.1em;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
-    text-shadow: 5px 5px #FFDDAB, 10px 10px #FF9A9A, 15px 15px #945034;
+
 }
 
 
@@ -929,11 +1064,8 @@ p {
 	letter-spacing:0.1em;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: white;
-    text-shadow: 5px 5px #FFDDAB, 10px 10px #FF9A9A, 15px 15px #945034;
+    
 }
-
-
-
 
 
 
@@ -944,9 +1076,10 @@ p {
 .section9{
     position: relative;
     min-height: 300vh;
-    width: 100%;
+    width: 100vw;
     padding: 0;
     margin: 0;
+    align-items: center;
     background: radial-gradient(circle, rgba(146,233,187,0.42482930672268904) 0%, rgba(123,206,242,1) 100%);
     animation: BackgroundGradientChange linear;
     animation-timeline: view(60% 20%);
@@ -954,21 +1087,25 @@ p {
 
 
 .section9 .background{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: sticky;
     top: 0;
-    background-image: url('landscape1.svg');
+    left: 0;
+    right: 0;
+    background-image: var(--img1);
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     z-index: 1;
 }
+
 
 
 .section9 .container{
     z-index: 2;
     min-height: 300vh;
-    width: 100%;
-    margin-top: -50vh;
+    width: 100vw;
     padding-left: 45%;
     padding-right: 5%;
 }
@@ -985,14 +1122,12 @@ p {
     height: 400px;
     position: sticky;
     top: 40%;
-    margin-top: -100vh;
-    opacity: 0;
     z-index: 3;
-    background-image: url('potetparaply1.png');
+    background-image: var(--img1);
     background-size: cover;
     animation: WalkingFromLeftSide ease-out forwards;
     animation-timeline: view();
-    animation-range: entry 0% cover 70%;
+    animation-range: entry 0 cover 70%;
  
 }
 
@@ -1022,6 +1157,7 @@ p {
 
 .section9 figure img{
     max-width: 100%;
+    width: 500px;
     height: auto;
     border-radius: 10px;
     border: 10px solid white;
@@ -1032,11 +1168,11 @@ p {
 
 
 /* SECTION10 */ 
-/* scroll / view background change animation*/
+/* scroll / view() background change animation*/
 
 .section10{
     min-height: 200vh;
-    width: 100%;
+    width: 100vw;
     position: relative;
     align-items: center;
     padding: 0;
@@ -1044,11 +1180,11 @@ p {
 
 
 .section10 .background{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: sticky;
     top: 0;
-    background-image: url('1.jpg');
+    background-image: var(--img1);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1061,9 +1197,12 @@ p {
     position: relative;
     z-index: 2;
     padding: 2rem;
-    margin-top: -100vh;
-    margin-left: 25%;
-    margin-right: 25%;
+    padding-left: 25%;
+    padding-right: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -1095,8 +1234,9 @@ p {
     height: auto;
 }
 
-.section10 figure img{
+.section10 figure img {
     max-width: 100%;
+    width: 500px;
     height: auto;
     border-radius: 10px;
     border: 10px solid white;
@@ -1129,10 +1269,10 @@ p {
 @keyframes FallDown {
     from {
         transform: translateY(0%);
-        opacity: 0.9;
+        opacity: 1;
     }
     to {
-        transform: translateY(180%);
+        transform: translateY(170%);
         opacity: 1;
     }
 }
@@ -1194,101 +1334,59 @@ p {
 }
 
 /* switches between 3 images */
-@keyframes ImageSwitching{
-    0%{
-        background-image: url('potetparaply1.png')
+@keyframes ImageSwitching3 {
+    0% { 
+        background-image: var(--img1); 
     }
-    50% {
-        background-image: url('potetparaply2.png')
+    50% { 
+        background-image: var(--img2); 
     }
-    100% {
-        background-image: url('potetparaply1.png')
+    100% { 
+        background-image: var(--img3); 
     }
 }
+
 
 
 /* Changing background images, assumming 11 images here*/
+
 @keyframes BackgroundImageChange11{
     0%{
-        background-image: url('1.jpg')
+        background-image: var(--img1);
     }
     10% {
-        background-image: url('2.jpg')
+        background-image: var(--img2);
     }
     20% {
-        background-image: url('3.jpg')
+        background-image: var(--img3);
     }
     30% {
-        background-image: url('4.jpg')
+        background-image: var(--img4);
     }
     40% {
-        background-image: url('4.jpg')
+        background-image: var(--img5);
     }
     50% {
-        background-image: url('6.jpg')
+        background-image: var(--img6);
     }
     60% {
-        background-image: url('7.jpg')
+        background-image: var(--img7);
     }
     70% {
-        background-image: url('8.jpg')
+        background-image: var(--img8);
     }
     80% {
-        background-image: url('9.jpg')
+        background-image: var(--img9);
     }
     90% {
-        background-image: url('10.jpg')
+        background-image: var(--img10);
     }
     100% {
-        background-image: url('11.jpg')
+        background-image: var(--img11);
     }
 }
 
-
-/* Starts walking from the left side */
-@keyframes WalkingFromLeftSide {
-    0% {
-      transform: translateX(-100%) translateY(0);
-      opacity: 0;
-    }
-    10% {
-      transform: translateX(-90%) translateY(-5px);
-      opacity: 0;
-    }
-    20% {
-      transform: translateX(-80%) translateY(0px);
-      opacity: 0;
-    }
-    30% {
-      transform: translateX(-65%) translateY(-6px);
-      opacity: 0;
-    }
-    40% {
-      transform: translateX(-50%) translateY(0px);
-      opacity: 1;
-    }
-    50% {
-      transform: translateX(-35%) translateY(-6px);
-    }
-    60% {
-      transform: translateX(-20%) translateY(0px);
-    }
-    70% {
-      transform: translateX(-5%) translateY(-4px);
-    }
-    80% {
-      transform: translateX(10vw) translateY(0px);
-    }
-    90% {
-      transform: translateX(15vw) translateY(-3px);
-    }
-    100% {
-      transform: translateX(20vw) translateY(0);
-      opacity: 1;
-    }
-  }
-
-@keyframes changeBackground5 {
+@keyframes ImageSwitching5 {
     0% { 
         background-image: var(--img1); 
     }
@@ -1305,3 +1403,321 @@ p {
         background-image: var(--img5); 
     }
 }
+
+
+/* Starts walking from the left side */
+@keyframes WalkingFromLeftSide {
+    0% {
+      transform: translateX(-100%) translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(-80%) translateY(1px);
+      opacity: 1;
+    }
+ 
+    100% {
+      transform: translateX(-60%) translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+
+
+
+  /* media queries for smaller screen */
+  
+  @media (max-width: 768px) {
+
+    /* section intro*/
+    .sectionintro .character1 {
+        width: 300px;
+        height: 300px;
+        top: 10%;
+        left: 5%;
+    }
+
+    .sectionintro .container {
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-top: 15%;
+    }
+
+    .sectionintro h1 {
+        font-size: 40px;
+        text-shadow: 5px 3px black;
+    }
+
+
+
+    /*section1 */
+    .section1 .container{
+        padding: 0 5%;
+        margin-top: 20px;
+    }
+    
+    .section1 h4 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .section1 h5{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .section1 p{
+        font-size: 16px;
+        padding: 15px;
+        text-align: center;
+    }
+
+
+    /*section2*/
+    .section2 .container{
+        padding: 30px 5%;
+        margin-top: 20px;
+    }
+    
+    .section2 h4 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .section2 h5{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .section2 p{
+        font-size: 16px;
+        padding: 15px;
+        text-align: center;
+    }
+
+
+    /*section3 */
+    .section3 .container{
+        align-items: center;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 5%;
+    }
+
+    .section3 figure{
+        grid-column: 1;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .section3 figure img{
+        max-width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .section3 .container h4, .section3 .container h5, .section3 .container p{
+        grid-column: 1;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .section3 h4{
+        font-size: 40px;
+    }
+
+    .section3 h5{
+        font-size: 30px;
+    }
+
+    .section3 p{
+        font-size: 16px;
+        padding: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+
+    /*section4*/
+    .section4 .container{
+        align-items: center;
+        grid-template-columns: 1fr;
+        margin: 0px;
+        padding: 0 5%;
+    }
+
+    .section4 figure{
+        grid-column: 1;
+        width: 100%;
+        padding: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .section4 figure img{
+        max-width: 90%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .section4 .container h4, .section4 .container h5, .section4 .container p{
+        grid-column: 1;
+        text-align: center;
+        margin-left: 3%;
+        margin-right: 3%;
+        padding: 10px;
+    }
+
+    .section4 h4{
+        font-size: 40px;
+    }
+
+    .section4 h5{
+        font-size: 30px;
+    }
+
+    .section4 p{
+        font-size: 16px;
+        padding: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+
+    /*section5*/
+    .section .container{
+        padding: 0 5%;
+    }
+
+    .section5 h4{
+        font-size: 30px;
+    }
+
+    .section5 h5{
+        font-size: 24px;
+    }
+
+    .section5 p{
+        font-size: 16px;
+        text-align: center;
+    }
+
+
+    /*section6*/
+    .section6 .container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .section6 h4{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .section6 h5{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .section6 p{
+        font-size: 16px;
+        text-align: center;
+        padding: 10px;
+    }
+
+
+    /*section7*/
+    .section7 .container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .section7 .character1{
+        width: 300px;
+        height: 300px;
+    }
+
+    .section7 figure{
+        max-width: 400px;
+        padding: 10px;
+    }
+
+    .section7 h4{
+        font-size: 60px;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .section7 h5{
+        font-size: 45px;
+        margin: 20px;
+        text-align: center;
+    }
+
+    .section7 p{
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    /*section8*/
+    .section8 .container{
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+
+    .section8 h4{
+        font-size: 30px;
+    }
+
+    .section8 h5{
+        font-size: 24px;
+    }
+
+    .section8 p{
+        font-size: 16px;
+    }
+
+
+    /*section9*/
+    .section9 .container{
+        padding-left: 5%;
+        padding-right: 5%;
+        z-index: 5;
+    }
+
+    .section9 figure img{
+        max-width: 90%;
+        border-bottom-width: 25px;
+    }
+
+    .section9 h4, .section9 h5{
+        text-align: center;
+        font-size: 30px;
+    }
+    
+
+    /*section10*/
+    .section10 .container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .section10 figure img{
+        max-width: 90%;
+    }
+
+    .section10 h4, .section10 h5{
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .section10 p{
+        font-size: 16px;
+    }
+
+  }
